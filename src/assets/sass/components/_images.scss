@@ -1,0 +1,89 @@
+/* ---------------------------------------------------
+IMAGES
+----------------------------------------------------- */
+.img-fluid {
+  border-radius: $border-radius-4;
+}
+
+.img-shopping-cart {
+  width: 100px;
+}
+
+.img-logo {
+  filter: var(--theme-img-logo);
+}
+
+.img-instructions {
+  width: 260px;
+}
+
+.img-examples-container {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 40px 1px $grey;
+
+  img {
+    margin: -10px 0px 0px -180px;
+  }
+}
+
+.img-input-file {
+  max-height: 120px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.profile-container {
+  transform: translate(0px, -60px);
+}
+
+.profile-picture {
+  inset: 0;
+  //border: 3px solid var(--theme-default);
+  border-radius: $border-radius-50;
+  box-shadow: $shadow-md;
+  margin-bottom: 16pt;
+  transform: translate(20px, 0px);
+  background-size: cover;
+  object-fit: contain;
+}
+
+/* ---------------------------------------------------
+    ICONS SVG
+----------------------------------------------------- */
+.icon-svg-wrap {
+  padding: 25px;
+  background-color: transparentize($primary, 0.9);
+  color: var(--theme-primary-active);
+  border-radius: $border-radius-12;
+  margin-right: 1rem;
+
+  &.svg-facebook {
+    background-color: transparentize(#006AFF, 0.9);
+    color: #006AFF;
+
+    &:hover {
+      background-color: transparentize(#006AFF, 0.8);
+    }
+  }
+
+  &.svg-pinterest {
+    background-color: transparentize(#E60023, 0.9);
+    color: #E60023;
+
+    &:hover {
+      background-color: transparentize(#E60023, 0.8);
+    }
+  }
+
+  &.svg-twitter {
+    background-color: transparentize(#1DA1F2, 0.9);
+    color: #1DA1F2;
+
+    &:hover {
+      background-color: transparentize(#1DA1F2, 0.8);
+    }
+  }
+}

@@ -1,0 +1,370 @@
+.form-control {
+  background-color: var(--theme-background);
+  color: var(--theme-on-primary);
+  border: 1px solid var(--theme-surface-card-outline);
+  border-radius: $border-radius-8;
+
+  &:hover {
+    background-color: var(--theme-background);
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-on-primary);
+  }
+
+  &:focus {
+    background-color: var(--theme-background);
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-primary-active);
+    outline: 0;
+    box-shadow: none !important;
+
+    & label {
+      color: #00c853 !important;
+    }
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--theme-disabled) !important;
+    opacity: 0.5;
+  }
+}
+
+.form-control-flat {
+  background-color: var(--theme-surface);
+  color: var(--theme-on-primary);
+  border: 1px solid var(--theme-surface);
+
+  &:focus {
+    background-color: var(--theme-surface);
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-surface);
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--theme-disabled) !important;
+    opacity: 0.5;
+  }
+}
+
+.form-control-outline {
+  background-color: transparent;
+  color: var(--theme-on-primary-inverse);
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--theme-surface);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--theme-on-primary-inverse);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--theme-surface);
+  }
+
+  &:focus {
+    background-color: transparent;
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-surface);
+    border-bottom: 1px solid var(--theme-surface);
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--theme-disabled) !important;
+    opacity: 0.5;
+  }
+
+  &::placeholder {
+    color: var(--theme-surface);
+  }
+
+  &::-webkit-input-placeholder {
+    color: var(--theme-surface);
+  }
+
+  &::-moz-placeholder {
+    color: var(--theme-surface);
+  }
+
+  &::-ms-input-placeholder {
+    color: var(--theme-surface);
+  }
+}
+
+.form-big-height {
+  height: calc(3.5rem + 2px);
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+  content: "Elegir";
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label {
+  color: var(--theme-secondary);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: var(--theme-on-secondary);
+  border-color: var(--theme-secondary);
+  background-color: var(--theme-secondary);
+}
+
+.custom-control-input ~ .custom-control-label::after {
+  margin-top: 5px;
+}
+
+.custom-control-input ~ .custom-control-label::before {
+  margin-top: 5px;
+}
+
+.custom-file-label {
+  background-color: var(--theme-surface);
+  color: var(--theme-on-primary);
+  border: 1px solid var(--theme-surface-card-outline);
+
+  &:hover {
+    background-color: var(--theme-surface);
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-primary);
+  }
+
+  &:focus {
+    background-color: var(--theme-surface);
+    color: var(--theme-on-primary);
+    border: 1px solid var(--theme-primary-active);
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: var(--theme-disabled) !important;
+    opacity: 0.5;
+  }
+}
+
+/* CUSTOM CSS SWITCH */
+.switch-label {
+  vertical-align: top;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b3b3b3;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0px;
+  bottom: -2px;
+  background-color: var(--theme-surface-1dp);
+  -webkit-transition: .2s;
+  transition: .2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+input:checked + .slider {
+  background-color: var(--theme-secondary-light);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--theme-secondary-active);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  background-color: var(--theme-secondary-active);
+}
+
+/* CUSTOM INPUT FILE */
+.input-file-dropbox {
+  border: 1px dashed $grey;
+  background: var(--theme-background);
+  color: var(--theme-on-primary) !important;
+  padding: 5px 0;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  position: relative;
+  cursor: pointer !important;
+  border-radius: $border-radius-8;
+  transition: $transition-cubic-bezier;
+}
+
+.input-file-dropbox:hover {
+  background: var(--theme-default);
+
+  p {
+    color: var(--theme-on-primary) !important;
+  }
+}
+
+.input-file-dropbox p {
+  text-align: center;
+  font-size: 12px;
+  color: var(--theme-on-primary) !important;
+  padding-top: 6px;
+}
+
+.input-file-dropbox-success {
+  border: 1px solid transparent;
+  background-color: lighten($success, 50%);
+
+  p {
+    color: $dark !important;
+  }
+}
+
+.input-file {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Vue Swatches */
+.vue-swatches__wrapper {
+  background: var(--theme-surface-1dp) !important;
+}
+
+.vue-swatches__container:not(.vue-swatches--inline) {
+  position: absolute;
+  display: block;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .2);
+  z-index: 50;
+  background: var(--theme-surface-1dp) !important;
+}
+
+.vue-swatches__fallback__input {
+  background-color: var(--theme-background) !important;
+  color: var(--theme-on-primary) !important;
+  border: 1px solid var(--theme-surface-card-outline) !important;
+  border-radius: $border-radius-8 !important;
+  height: 30px;
+  padding: 10px !important;
+}
+
+.vue-swatches__fallback__button {
+  padding: 8px;
+  margin: 4px;
+  font-family: map-get($mdc-typography-styles-button, font-family);
+  font-weight: map-get($mdc-typography-styles-button, font-weight);
+  font-size: map-get($mdc-typography-styles-button, font-size);
+  letter-spacing: map-get($mdc-typography-styles-button, letter-spacing);
+  background-color: var(--theme-primary) !important;
+  color: var(--theme-on-primary-inverse) !important;
+  border-radius: $border-radius-8;
+  border-style: none;
+  text-transform: uppercase;
+  box-shadow: $shadow-1dp;
+  transition: $transition-cubic-bezier;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+}
+
+.vue-swatches__trigger__wrapper {
+  width: 100% !important;
+}
+
+.floating-input-material {
+  position: absolute;
+  background: white;
+  top: 9px;
+  left: 10px;
+  height: 50%;
+  padding: 10px 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0px -130px;
+  opacity: 1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--theme-surface) inset !important;
+  -webkit-text-fill-color: var(--theme-on-primary) !important;
+}
+
+// VUE SELECT CUSTOM STYLES
+.vs__selected {
+  background-color: var(--theme-background) !important;
+  border: 1px solid var(--theme-background) !important;
+  border-radius: $border-radius-4 !important;
+  color: var(--theme-on-primary) !important;
+
+  .vs__deselect svg {
+    filter: var(--theme-img-logo);
+  }
+}
+
+.vs__dropdown-menu {
+  background-color: var(--theme-background) !important;
+  color: var(--theme-on-primary) !important;
+  border-radius: $border-radius-8 !important;
+  border: 1px solid var(--theme-background) !important;
+  box-shadow: $shadow-8dp !important;
+}
+
+.vs__search::placeholder {
+  background-color: #00c853 !important;
+}
+
+.vs__dropdown-toggle {
+  background-color: var(--theme-background) !important;
+  color: var(--theme-on-primary) !important;
+  border: 1px solid var(--theme-surface-card-outline) !important;
+  height: calc(3.5rem + 2px);
+  border-radius: $border-radius-8 !important;
+}
+
+.vs__dropdown-option {
+  color: var(--theme-on-primary) !important;
+}
+
+$vs-state-active-bg: var(--theme-primary) !important;
+$vs-state-active-color: var(--theme-on-primary-inverse) !important;
+
+.vs__dropdown-option--highlight {
+  background: $vs-state-active-bg;
+  color: $vs-state-active-color;
+}

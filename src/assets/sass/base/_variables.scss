@@ -1,0 +1,316 @@
+// CSS Theme light
+:root {
+  // Primary colors
+  --theme-background: #ffffff;
+  --theme-on-primary: #000000;
+  --theme-on-primary-inverse: #ffffff;
+  --theme-primary: #3b2eff;
+  --theme-primary-hover: #0023f7;
+  --theme-primary-active: #000eee;
+  --theme-on-secondary: #000000;
+  --theme-on-secondary-inverse: #ffffff;
+  --theme-secondary: #ffc107;
+  --theme-secondary-hover: #ffa000;
+  --theme-secondary-active: #ff6f00;
+  --theme-accent: #1d4168;
+  --theme-accent-hover: #18375c;
+  --theme-accent-active: #132743;
+  // Variants colors
+  --theme-muted: #6c757d;
+  --theme-success: #00c853;
+  --theme-warning: #ffab00;
+  --theme-danger: #de2839;
+  --theme-danger-hover: #cc1d33;
+  --theme-danger-active: #b00020;
+  --theme-green: #00e676;
+  --theme-blue: #1877f2;
+  --theme-default: #f5f8fa;
+  --theme-default-active: #dadce0;
+  --theme-disabled: #e9ecef;
+  --theme-table-hover: #00000003;
+  // Surfaces colors
+  --theme-footer: #f5f8fa;
+  --theme-sidebar: #ffffff;
+  --theme-navbar: #ffffff;
+  --theme-surface: #F8F8F8;
+  --theme-surface-inverse: #272727;
+  --theme-surface-bottom: #f9f9f9;
+  --theme-surface-1dp: #ffffff;
+  --theme-surface-card-outline: #dadce0;
+  --theme-on-surface: #757575;
+  // Light colors
+  --theme-primary-light: #eee7ff;
+  --theme-secondary-light: #fff8e1;
+  --theme-accent-light: #e3f7ff;
+  --theme-blue-light: #e8f0fe;
+  --theme-yellow-light: #fef7e0;
+  --theme-green-light: #e6f4ea;
+  --theme-red-light: #fce8e6;
+  // Image filters
+  --theme-img-logo: none;
+  --theme-carousel-controls: brightness(0) invert(1);
+}
+
+// CSS Theme dark
+[theme="dark"] {
+  // Primary colors
+  --theme-background: #121212;
+  --theme-on-primary: #ffffff;
+  --theme-on-primary-inverse: #000000;
+  --theme-primary: #d1c4ff;
+  --theme-primary-hover: #b19cff;
+  --theme-primary-active: #643fff;
+  --theme-on-secondary: #000000;
+  --theme-on-secondary-inverse: #ffffff;
+  --theme-secondary: #ffecb3;
+  --theme-secondary-hover: #ffe082;
+  --theme-secondary-active: #ffd54f;
+  --theme-accent: #bec9d6;
+  --theme-accent-hover: #95a6ba;
+  --theme-accent-active: #6d839e;
+  // Variants colors
+  --theme-muted: #92989d;
+  --theme-success: #8fdf9e;
+  --theme-warning: #fef697;
+  --theme-danger: #fbcad2;
+  --theme-danger-hover: #ea959b;
+  --theme-danger-active: #de6c74;
+  --theme-green: #8fdf9e;
+  --theme-blue: #bbdfff;
+  --theme-default: #272727;
+  --theme-default-active: #323232;
+  --theme-disabled: #939393;
+  --theme-table-hover: #ffffff0f;
+  // Surfaces colors
+  --theme-footer: #272727;
+  --theme-sidebar: #272727;
+  --theme-navbar: #1f1f1f;
+  --theme-surface: #272727;
+  --theme-surface-inverse: #F8F8F8;
+  --theme-surface-bottom: #272727;
+  --theme-surface-1dp: #1e1e1e;
+  --theme-surface-card-outline: #323232;
+  --theme-on-surface: #bdbdbd;
+  // Light colors
+  --theme-primary-light: #eee7ff;
+  --theme-secondary-light: #fff8e1;
+  --theme-accent-light: #e3f7ff;
+  --theme-blue-light: #e8f0fe;
+  --theme-yellow-light: #fef7e0;
+  --theme-green-light: #e6f4ea;
+  --theme-red-light: #fce8e6;
+  // Image filters
+  --theme-img-logo: brightness(0) invert(1);
+  --theme-carousel-controls: brightness(0) invert(1);
+}
+
+// SASS Basic colors
+$black: #000000;
+$white: #ffffff;
+$grey: #757575;
+$dark: #212121;
+$default: #f5f8fa;
+$primary: #3b2eff;
+$secondary: #ffc107;
+$accent: #1d4168;
+$default: #f5f8fa;
+$success: #00c853;
+$warning: #ffab00;
+$info: #0000be;
+$danger: #de2839;
+
+$red: #ff1744;
+$pink: #f50057;
+$purple: #d500f9;
+$deep-purple: #651fff;
+$blue: #2979ff;
+$cyan: #00e5ff;
+$teal: #1de9b6;
+$green: #00e676;
+$yellow: #ffea00;
+$amber: #ffc400;
+$orange: #ff3d00;
+
+$offset: 187;
+$duration: 1.4s;
+
+// Fonts
+$font-roboto: 'Roboto',
+sans-serif;
+$font-poppins: 'Poppins',
+sans-serif;
+$font-montserrat: 'Montserrat',
+sans-serif;
+
+// Type scale
+$mdc-typography-styles-headline1: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: lighter,
+        font-size: 93px,
+        letter-spacing: -1.5px,
+);
+
+$mdc-typography-styles-headline2: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: lighter,
+        font-size: 58px,
+        letter-spacing: -0.5px,
+);
+
+$mdc-typography-styles-headline3: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: normal,
+        font-size: 46px,
+        letter-spacing: 0px,
+);
+
+$mdc-typography-styles-headline4: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: normal,
+        font-size: 33px,
+        letter-spacing: 0.25px,
+);
+
+$mdc-typography-styles-headline5: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: normal,
+        font-size: 23px,
+        letter-spacing: 0px,
+);
+
+$mdc-typography-styles-headline6: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: medium,
+        font-size: 19px,
+        letter-spacing: 0.15px,
+);
+
+$mdc-typography-styles-subtitle1: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: normal,
+        font-size: 15px,
+        letter-spacing: 0.15px,
+);
+
+$mdc-typography-styles-subtitle2: (
+        font-family: ("Poppins", sans-serif, "Montserrat"),
+        font-weight: medium,
+        font-size: 13px,
+        letter-spacing: 0.1px,
+);
+
+$mdc-typography-styles-body1: (
+        font-family: ("Roboto", sans-serif),
+        font-weight: normal,
+        font-size: 16px,
+        letter-spacing: 0.5px,
+);
+
+$mdc-typography-styles-body2: (
+        font-family: ("Roboto", sans-serif),
+        font-weight: normal,
+        font-size: 14px,
+        letter-spacing: 0.25px,
+);
+
+$mdc-typography-styles-button: (
+        font-family: ("Roboto", sans-serif),
+        font-weight: bold,
+        font-size: 14px,
+        letter-spacing: 1.25px,
+);
+
+$mdc-typography-styles-caption: (
+        font-family: ("Roboto", sans-serif),
+        font-weight: medium,
+        font-size: 10px,
+        letter-spacing: 0.4px,
+);
+
+$mdc-typography-styles-overline: (
+        font-family: ("Roboto", sans-serif),
+        font-weight: normal,
+        font-size: 15px,
+        letter-spacing: 1.5px,
+);
+
+// Border radius
+$border-radius-0: 0px;
+$border-radius-4: 4px;
+$border-radius-8: 8px;
+$border-radius-12: 12px;
+$border-radius-25: 25px;
+$border-radius-50: 50px;
+
+// Transition
+$transition-cubic-bezier: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+// Elevations shadows (Material design)
+$shadow-0dp: none;
+
+$shadow-1dp: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+$shadow-2dp: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+
+$shadow-3dp: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+
+$shadow-4dp: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-5dp: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-6dp: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-7dp: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+0px 7px 10px 1px rgba(0, 0, 0, 0.14),
+0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+
+$shadow-8dp: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+$shadow-9dp: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),
+0px 9px 12px 1px rgba(0, 0, 0, 0.14),
+0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+
+$shadow-10dp: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+0px 10px 14px 1px rgba(0, 0, 0, 0.14),
+0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+
+$shadow-11dp: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),
+0px 11px 15px 1px rgba(0, 0, 0, 0.14),
+0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+
+$shadow-12dp: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),
+0px 12px 17px 2px rgba(0, 0, 0, 0.14),
+0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+
+// Elevation shadows (Flat design)
+$shadow-sm: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+$shadow-md: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0px 1px 30px 5px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0px 5px 50px 10px rgba(0, 0, 0, 0.1);
+
+// Forms
+$theme-text-field-filled: #f3f3f3;
+$theme-text-field-filled-hover: #eeeeee;
+$theme-text-field-filled-active: #d1d1d1;
+$theme-text-field-outlined: #bbbbbb;
+$theme-text-field-outlined-hover: #000000;
+
+$custom-file-text: (
+        en: "Browse",
+        es: "Elegir"
+);
+

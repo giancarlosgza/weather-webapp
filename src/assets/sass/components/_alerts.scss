@@ -1,0 +1,37 @@
+/* ---------------------------------------------------
+    ALERTS
+----------------------------------------------------- */
+.alert {
+  border: 1px solid transparent !important;
+  border-radius: $border-radius-12 !important;
+
+  &.alert-primary {
+    background-color: lighten($primary, 25%) !important;
+    color: darken($primary, 40%) !important;
+  }
+
+  &.alert-secondary {
+    background-color: lighten($secondary, 40%) !important;
+    color: darken($secondary, 30%) !important;
+  }
+
+  &.alert-success {
+    background-color: lighten($success, 55%) !important;
+    color: darken($success, 20%) !important;
+  }
+
+  &.alert-warning {
+    background-color: lighten($warning, 45%) !important;
+    color: darken($warning, 20%) !important;
+  }
+
+  &.alert-danger {
+    background-color: lighten($danger, 45%) !important;
+    color: darken($danger, 20%) !important;
+  }
+
+  &.alert-info {
+    background-color: lighten($info, 60%) !important;
+    color: darken($info, 20%) !important;
+  }
+}

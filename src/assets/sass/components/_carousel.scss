@@ -1,0 +1,11 @@
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-dark .carousel-indicators li {
+  background-color: var(--theme-on-primary);
+}
+
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+  filter: var(--theme-carousel-controls) !important;
+}

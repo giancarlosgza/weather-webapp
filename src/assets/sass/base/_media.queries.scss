@@ -1,0 +1,157 @@
+@media screen and (max-width: 1155px) {
+  .palette-color {
+    font-size: .7rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 47px
+  }
+
+  h2 {
+    font-size: 43px
+  }
+
+  h3 {
+    font-size: 38px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h5 {
+    font-size: 20px
+  }
+
+  h6 {
+    font-size: 17px
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .h-md-100 {
+    height: auto;
+  }
+
+  .input-xs-full-width {
+    width: 100% !important;
+  }
+
+  .img-instructions {
+    width: 250px;
+  }
+
+  .section-benefits {
+    padding: 60px 0 60px 0 !important;
+  }
+
+  .float-made-by {
+    display: none !important;
+
+    a img {
+      display: none !important;
+    }
+  }
+
+  .switch-label {
+    vertical-align: middle !important;
+  }
+
+  .btn-fab {
+    bottom: 80px !important;
+
+    &.btn-fab-download {
+      bottom: 150px !important;
+    }
+  }
+
+  .btn-fab-extended {
+    position: fixed !important;
+    width: 55px;
+    height: 55px;
+    padding: 15px !important;
+    border-radius: $border-radius-50 !important;
+    box-shadow: $shadow-6dp !important;
+    bottom: 80px;
+    right: 20px;
+    z-index: 99;
+
+    .btn-fab-text-label {
+      display: none;
+    }
+  }
+
+  .palette-color {
+    font-size: .7rem !important;
+  }
+
+  .bottom-nav {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 45px
+  }
+
+  h2 {
+    font-size: 41px
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 18px
+  }
+
+  h6 {
+    font-size: 15px
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  .h-md-100 {
+    height: auto;
+  }
+
+  .btn-xs-full-width {
+    width: 100%;
+  }
+
+  .input-xs-full-width {
+    width: 100% !important;
+  }
+
+  .section-benefits {
+    padding: 50px 0 50px 0 !important;
+  }
+
+  .float-ads {
+    display: none !important;
+  }
+
+  .switch-label {
+    vertical-align: middle !important;
+  }
+
+  .palette-color {
+    font-size: .8rem !important;
+  }
+
+}

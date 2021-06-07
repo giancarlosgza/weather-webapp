@@ -1,0 +1,25 @@
+$color: #80d144;
+$tiles: 10;
+
+.tile {
+  width: 70px;
+  height: 70px;
+  background-color: $color;
+
+  &--tint {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: tint($color, 10*$i);
+      }
+    }
+  }
+
+  &--shade {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: shade($color, 10*$i);
+      }
+    }
+  }
+
+}

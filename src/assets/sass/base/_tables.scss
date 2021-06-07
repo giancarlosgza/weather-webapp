@@ -1,0 +1,22 @@
+table {
+  font-size: 12px;
+}
+
+table th {
+  color: var(--theme-muted) !important;
+  font-family: Roboto, 'sans-serif';
+  font-weight: 500;
+  letter-spacing: .07272727em;
+  font-size: 11px;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+
+table td {
+  color: var(--theme-on-primary);
+  white-space: nowrap;
+}
+
+.table-hover>tbody>tr:hover {
+  background-color: var(--theme-table-hover) !important;
+}

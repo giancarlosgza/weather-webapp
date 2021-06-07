@@ -1,0 +1,24 @@
+.page-link {
+  background-color: var(--theme-surface);
+  border: var(--theme-surface);
+  color: var(--theme-on-primary);
+
+  &:hover {
+    color: var(--theme-on-primary-inverse);
+    background-color: var(--theme-primary);
+    border-color: var(--theme-primary);
+  }
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: var(--theme-on-primary-inverse);
+  background-color: var(--theme-primary-active);
+  border-color: var(--theme-primary-active);
+}
+
+.page-item.disabled .page-link {
+  background-color: var(--theme-surface-1dp);
+  border: var(--theme-surface-1dp);
+  color: var(--theme-on-primary-inverse);
+}
