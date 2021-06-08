@@ -2,10 +2,10 @@
 node_modules
 /dist
 
-
 # local env files
 .env.local
 .env.*.local
+.env
 
 # Log files
 npm-debug.log*
@@ -21,3 +21,11 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+firebase-debug.log
+
+firestore-debug.log
+
+.env.production
+
+*.cache
