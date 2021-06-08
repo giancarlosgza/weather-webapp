@@ -1,0 +1,34 @@
+<template>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" v-model="darkMode">
+            <label class="btn btn-primary-outline btn-micint-rotate btn-round ripple ripple-primary m-0"
+                   for="btn-check">
+              <i class="material-icons-outlined me-2" :class="[ darkMode ? 'text-warning' : 'text-muted']">
+                {{ darkMode ? 'brightness_5' : 'dark_mode' }}</i>
+              Turn {{ darkMode ? 'on' : 'off' }} the lights
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  computed: {
+    darkMode: {
+      get() {
+        return this.$store.getters.darkMode
+      },
+      set(newValue) {
+        this.$store.commit("SET_DARK_MODE", newValue)
+      }
+    }
+  },
+}
+</script>
