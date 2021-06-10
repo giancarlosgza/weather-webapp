@@ -90,6 +90,11 @@
   }
 }
 
+.form-control-border-bottom {
+  background-color: var(--theme-surface-1dp);
+  border: 1px solid transparent !important;
+}
+
 .form-big-height {
   height: calc(3.5rem + 2px);
 }
@@ -200,6 +205,21 @@ input:checked + .slider:before {
   -ms-transform: translateX(15px);
   transform: translateX(15px);
   background-color: var(--theme-secondary-active);
+}
+
+.input-group-text {
+  background-color: var(--theme-secondary);
+  color: var(--theme-on-primary-inverse);
+  border-top-right-radius: $border-radius-8;
+  border-bottom-right-radius: $border-radius-8;
+
+  &.input-group-text-transparent {
+    background-color: transparent !important;
+    color: var(--theme-on-primary);
+    border: transparent;
+    border-top-left-radius: $border-radius-8;
+    border-bottom-left-radius: $border-radius-8;
+  }
 }
 
 /* CUSTOM INPUT FILE */
