@@ -104,6 +104,12 @@ body {
   background: linear-gradient(to left, #404040, #212121) !important;
 }
 
+.bg-frosted {
+  background-color: $frosted-glass-bg !important;
+  backdrop-filter: $frosted-glass-backdrop-filter !important;
+}
+
+
 /* ---------------------------------------------------
     BORDERS
 ----------------------------------------------------- */
@@ -240,13 +246,22 @@ body {
   height: auto;
   width: 100%;
   transition: $transition-cubic-bezier;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   padding-bottom: .5rem;
 
-  .card {
-    margin-right: 1rem;
-    min-height: 150px;
+  .wrapper {
+    .card {
+      margin-right: 1rem;
+      min-height: 150px;
+    }
+
+    &:last-child {
+      .card {
+        margin-right: 0;
+      }
+    }
   }
+
 
   /*.btn {
     width: 100px !important;

@@ -1,10 +1,10 @@
 <template>
   <div class="home">
 
-    <div class="container mb-5">
-      <div class="row justify-content-center my-3">
+    <div class="container mb-3">
+      <div class="row justify-content-center py-3">
         <div class="col-md-8">
-          <div class="card">
+          <div class="card border-radius-50">
             <div class="card-body">
               <div class="input-group">
                   <span class="input-group-text input-group-text-transparent" id="input-city">
@@ -60,7 +60,7 @@
         </div>
 
         <div class="scrolling-wrapper">
-          <div>
+          <div class="wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="text-center">
@@ -75,7 +75,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="text-center">
@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="text-center">
@@ -105,7 +105,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="text-center">
@@ -120,7 +120,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="wrapper">
             <div class="card">
               <div class="card-body">
                 <div class="text-center">
@@ -135,7 +135,26 @@
               </div>
             </div>
           </div>
+          <div class="wrapper">
+            <div class="card">
+              <div class="card-body">
+                <div class="text-center">
+                  <IconWeather :weather="weather" number="5"></IconWeather>
+                  <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[5].weather[0].description }}</h6>
+                  <h6 class="subtitle-1 fw-500">Tuesday</h6>
+                  <div class="text-center">
+                    <h6 class="subtitle-1">{{ weather.daily[5].temp.max }} - <span
+                      class="text-muted">{{ weather.daily[5].temp.min }}</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div v-else>
+        <h6>No weather data available</h6>
       </div>
 
     </div>

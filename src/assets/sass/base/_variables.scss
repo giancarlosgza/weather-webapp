@@ -134,6 +134,9 @@ $orange: #ff3d00;
 $offset: 187;
 $duration: 1.4s;
 
+$frosted-glass-bg: rgba(255, 255, 255, 0.30);
+$frosted-glass-backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+
 // Fonts
 $font-roboto: 'Roboto',
 sans-serif;

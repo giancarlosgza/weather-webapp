@@ -2,7 +2,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center">
           <div>
             <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" v-model="darkMode">
             <label class="btn btn-primary-outline btn-micint-rotate btn-round ripple ripple-primary m-0"
