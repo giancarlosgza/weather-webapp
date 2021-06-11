@@ -1,5 +1,5 @@
 <template>
-  <div class="home bg-hot" :class="[]">
+  <div class="home" v-if="weather.current" :class="[ isColdWeather ? 'bg-cold' : 'bg-hot']">
 
     <div class="container mb-3">
       <div class="row justify-content-center py-3">
@@ -241,22 +241,36 @@ export default {
       url_base: process.env.VUE_APP_API_URL_BASE,
       url_settings: process.env.VUE_APP_API_URL_SETTINGS,
       query: 'lat=25.6667&lon=-100.3167',
-      weather: {}
+      weather: {},
+      isColdWeather: false
     }
   },
   mounted() {
     this.getWeather()
+
   },
   methods: {
-    getWeather() {
-      fetch(`${this.url_base}?${this.query}&${this.url_settings}&appid=${this.api_key}`)
-        .then(res => {
-          return res.json()
-        }).then(this.setResults)
+    async getWeather() {
+      try {
+        await fetch(`${this.url_base}?${this.query}&${this.url_settings}&appid=${this.api_key}`)
+          .then(async res => {
+            return await res.json()
+          }).then(this.setResults)
+      } catch (error) {
+        console.log(error)
+      }
     },
+
     setResults(results) {
       this.weather = results
+
+      const temperature = this.weather.current.temp
+      if (temperature < 25) {
+        this.isColdWeather = true
+      }
+      console.log(temperature)
     }
+
   }
 }
 </script>
