@@ -56,16 +56,26 @@ body {
 
 .bg-success {
   background-color: var(--theme-success) !important;
-  color: var(--theme-on-primary-inverse) !important;
+  color: $dark !important;
 }
 
 .bg-warning {
   background-color: var(--theme-warning) !important;
-  color: var(--theme-on-primary-inverse) !important;
+  color: $dark !important;
 }
 
 .bg-danger {
   background-color: var(--theme-danger) !important;
+  color: var(--theme-on-primary-inverse) !important;
+}
+
+.bg-orange {
+  background-color: var(--theme-orange) !important;
+  color: $black !important;
+}
+
+.bg-purple {
+  background-color: var(--theme-purple) !important;
   color: var(--theme-on-primary-inverse) !important;
 }
 
@@ -92,6 +102,10 @@ body {
   color: var(--theme-on-surface);
 }
 
+/* ---------------------------------------------------
+    BACKGROUND GRADIENTS
+----------------------------------------------------- */
+
 .bg-primary-gradient {
   background: linear-gradient(to left, var(--theme-primary), var(--theme-primary-hover)) !important;
 }
@@ -105,8 +119,16 @@ body {
 }
 
 .bg-frosted {
-  background-color: $frosted-glass-bg !important;
-  backdrop-filter: $frosted-glass-backdrop-filter !important;
+  background-color: var(--frosted-glass-bg) !important;
+  backdrop-filter: var(--frosted-glass-backdrop-filter) !important;
+}
+
+.bg-cold {
+  background: linear-gradient(to right, #dddcff, #7dc4f2);
+}
+
+.bg-hot {
+  background: linear-gradient(to right, #ff904f, #ffc061, #ffd54c);
 }
 
 
@@ -137,13 +159,34 @@ body {
   border-radius: $border-radius-50 !important;
 }
 
+.border-primary {
+  border: 1px solid var(--theme-primary) !important;
+}
+
+.border-secondary {
+  border: 1px solid var(--theme-secondary) !important;
+}
+
 .border-success {
-  border: 5px solid var(--theme-success);
+  border: 1px solid var(--theme-success) !important;
 }
 
 .border-danger {
-  border: 5px solid var(--theme-danger);
+  border: 1px solid var(--theme-danger) !important;
 }
+
+.border-deep-purple {
+  border: 1px solid $deep-purple !important;
+}
+
+.border-blue {
+  border: 1px solid $blue !important;
+}
+
+.border-amber {
+  border: 1px solid $amber !important;
+}
+
 
 /* ---------------------------------------------------
     SHADOWS (MATERIAL DESIGN)
@@ -247,6 +290,7 @@ body {
   width: 100%;
   transition: $transition-cubic-bezier;
   margin-bottom: 1rem;
+  padding-top: .5rem;
   padding-bottom: .5rem;
 
   .wrapper {

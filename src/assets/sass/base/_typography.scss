@@ -401,6 +401,16 @@ i.material-icons-outlined {
   border-radius: $border-radius-50;
   box-shadow: $shadow-sm;
 
+  &.icon-wrap-sm {
+    padding: .8rem;
+  }
+
+  &.icon-wrap-primary {
+    background-color: scale-color($primary, $alpha: -85%);
+    color: $primary;
+    box-shadow: $shadow-0dp;
+  }
+
   &.icon-wrap-red {
     color: $red;
   }
@@ -445,5 +455,11 @@ i.material-icons-outlined {
     color: $orange;
   }
 
-}
+  &.icon-wrap-gradient {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #7319fa;
+    background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
+  }
 
+}

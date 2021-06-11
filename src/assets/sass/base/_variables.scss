@@ -19,11 +19,13 @@
   --theme-muted: #6c757d;
   --theme-success: #00c853;
   --theme-warning: #ffab00;
-  --theme-danger: #de2839;
-  --theme-danger-hover: #cc1d33;
-  --theme-danger-active: #b00020;
+  --theme-danger: #af0010;
+  --theme-danger-hover: #8F000C;
+  --theme-danger-active: #700009;
   --theme-green: #00e676;
   --theme-blue: #1877f2;
+  --theme-orange: #ff7c00;
+  --theme-purple: #651fff;
   --theme-default: #f5f8fa;
   --theme-default-active: #dadce0;
   --theme-disabled: #e9ecef;
@@ -49,6 +51,8 @@
   // Image filters
   --theme-img-logo: none;
   --theme-carousel-controls: brightness(0) invert(1);
+  --frosted-glass-bg: rgba(255, 255, 255, 0.30);
+  --frosted-glass-backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
 }
 
 // CSS Theme dark
@@ -69,7 +73,7 @@
   --theme-accent-hover: #95a6ba;
   --theme-accent-active: #6d839e;
   // Variants colors
-  --theme-muted: #92989d;
+  --theme-muted: #e5e7e8;
   --theme-success: #8fdf9e;
   --theme-warning: #fef697;
   --theme-danger: #fbcad2;
@@ -77,6 +81,8 @@
   --theme-danger-active: #de6c74;
   --theme-green: #8fdf9e;
   --theme-blue: #bbdfff;
+  --theme-orange: #ffc9b7;
+  --theme-purple: #d7c3fe;
   --theme-default: #272727;
   --theme-default-active: #323232;
   --theme-disabled: #939393;
@@ -102,6 +108,8 @@
   // Image filters
   --theme-img-logo: brightness(0) invert(1);
   --theme-carousel-controls: brightness(0) invert(1);
+  --frosted-glass-bg: rgba(0, 0, 0, 0.50);
+  --frosted-glass-backdrop-filter: blur(20px) saturate(150%) contrast(100%) brightness(100%);
 }
 
 // SASS Basic colors
@@ -136,6 +144,9 @@ $duration: 1.4s;
 
 $frosted-glass-bg: rgba(255, 255, 255, 0.30);
 $frosted-glass-backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+
+$frosted-glass-bg-dark: rgba(0, 0, 0, 0.50);
+$frosted-glass-backdrop-filter-dark: blur(20px) saturate(150%) contrast(100%) brightness(100%);
 
 // Fonts
 $font-roboto: 'Roboto',

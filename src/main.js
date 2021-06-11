@@ -10,6 +10,7 @@ import 'bootstrap'
 
 Vue.config.productionTip = false
 
+Vue.use(require('vue-moment'));
 Vue.use(VueMeta);
 
 new Vue({
