@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- CLEAR -->
     <div v-if="weather.daily[number].weather[0].main === 'Clear'" class="mb-3">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
         <path fill="none" d="M0 0h24v24H0z"/>
@@ -8,6 +9,7 @@
           fill="rgba(255,173,0,1)"/>
       </svg>
     </div>
+    <!-- RAIN -->
     <div v-if="weather.daily[number].weather[0].main === 'Rain'" class="mb-3">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
         <path fill="none" d="M0 0h24v24H0z"/>
@@ -16,12 +18,40 @@
           fill="rgba(149,164,166,1)"/>
       </svg>
     </div>
+    <!-- CLOUDS -->
     <div v-if="weather.daily[number].weather[0].main === 'Clouds'" class="mb-3">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
         <path fill="none" d="M0 0h24v24H0z"/>
         <path
           d="M9.5 6a6.5 6.5 0 0 0 0 13h7a4.5 4.5 0 1 0-.957-8.898A6.502 6.502 0 0 0 9.5 6zm7 15h-7a8.5 8.5 0 1 1 7.215-12.997A6.5 6.5 0 0 1 16.5 21z"
           fill="rgba(149,164,166,1)"/>
+      </svg>
+    </div>
+    <!-- THUNDERSTORM -->
+    <div v-if="weather.daily[number].weather[0].main === 'Thunderstorm'" class="mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path
+          d="M17 18v-2h.5a3.5 3.5 0 1 0-2.5-5.95V10a6 6 0 1 0-8 5.659v2.089a8 8 0 1 1 9.458-10.65A5.5 5.5 0 1 1 17.5 18l-.5.001zm-4-1.995h3l-5 6.5v-4.5H8l5-6.505v4.505z"
+          fill="rgba(52,72,94,1)"/>
+      </svg>
+    </div>
+    <!-- DRIZZLE -->
+    <div v-if="weather.daily[number].weather[0].main === 'Drizzle'" class="mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path
+          d="M17 18v-2h.5a3.5 3.5 0 1 0-2.5-5.95V10a6 6 0 1 0-8 5.659v2.089a8 8 0 1 1 9.458-10.65A5.5 5.5 0 1 1 17.5 18l-.5.001zm-8-2h2v4H9v-4zm4 3h2v4h-2v-4z"
+          fill="rgba(149,164,166,1)"/>
+      </svg>
+    </div>
+    <!-- SNOW -->
+    <div v-if="weather.daily[number].weather[0].main === 'Snow'" class="mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path
+          d="M13 16.268l1.964-1.134 1 1.732L14 18l1.964 1.134-1 1.732L13 19.732V22h-2v-2.268l-1.964 1.134-1-1.732L10 18l-1.964-1.134 1-1.732L11 16.268V14h2v2.268zM17 18v-2h.5a3.5 3.5 0 1 0-2.5-5.95V10a6 6 0 1 0-8 5.659v2.089a8 8 0 1 1 9.458-10.65A5.5 5.5 0 1 1 17.5 18l-.5.001z"
+          fill="rgba(195,195,195,1)"/>
       </svg>
     </div>
   </div>
