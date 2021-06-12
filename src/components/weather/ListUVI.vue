@@ -16,7 +16,8 @@
     </h6>
     <h6 class="subtitle-2 bg-danger border-radius-4 p-1"
         v-if="Math.round(weather.current.uvi) <= 10 && weather.current.uvi > 7.5">
-      VH -
+      <span class="d-inline-block d-md-none">VH -</span>
+      <span class="d-none d-md-inline-block">Very High -</span>
       {{ Math.round(weather.current.uvi) }}
     </h6>
     <h6 class="subtitle-2 bg-purple border-radius-4 p-1" v-if="Math.round(weather.current.uvi) >= 11">
