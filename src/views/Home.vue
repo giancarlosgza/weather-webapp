@@ -4,7 +4,7 @@
     <div class="container mb-3">
       <div class="row justify-content-center py-3">
         <div class="col-md-8">
-          <div class="card bg-frosted border-radius-50">
+          <div class="card bg-frosted border-radius-25">
             <div class="card-body">
               <div class="input-group">
                   <span class="input-group-text input-group-text-transparent" id="input-city">
@@ -59,6 +59,39 @@
             </div>
           </div>
         </div>
+        <!-- CURRENT WEATHER SUNRISE AND SUNSET -->
+        <div class="col-md-8 mb-3">
+          <h6 class="subtitle-1 text-dark mb-3">Today</h6>
+          <div class="card bg-frosted">
+            <div class="card-body pb-2">
+              <div class="d-flex justify-content-around">
+
+                <div class="text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path
+                      d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                      fill="rgba(255,173,0,1)"/>
+                  </svg>
+                  <h6 class="subtitle-2 text-muted mt-2">Sunrise</h6>
+                  <h6 class="subtitle-2">{{ weather.current.sunrise | moment("h:mm") }} am</h6>
+                </div>
+
+                <div class="text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path
+                      d="M6.083 13a6 6 0 1 1 11.834 0h-2.043a4 4 0 1 0-7.748 0H6.083zM2 15h10v2H2v-2zm12 0h8v2h-8v-2zm2 4h4v2h-4v-2zM4 19h10v2H4v-2zm7-18h2v3h-2V1zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM19.07 3.515l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                      fill="rgba(234,119,11,1)"/>
+                  </svg>
+                  <h6 class="subtitle-2 text-muted mt-2">Sunset</h6>
+                  <h6 class="subtitle-2 mt-2">{{ weather.current.sunset | moment("h:mm") }} pm</h6>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- CURRENT WEATHER DETAILS -->
         <div class="col-md-8 mb-3">
           <div class="card bg-frosted">
@@ -70,7 +103,7 @@
                     <h6 class="subtitle-2 text-muted">
                       Pressure
                     </h6>
-                    <h6 class="subtitle-2 fw-500 p-1">{{ weather.current.pressure }} mb</h6>
+                    <h6 class="subtitle-2 fw-500 p-1">{{ weather.current.pressure }} mBar</h6>
                   </div>
                   <div class="col-4 col-md-4">
                     <i class="material-icons-outlined text-muted mdc-18 mb-1">wb_sunny</i>
@@ -93,8 +126,14 @@
         </div>
       </div>
 
+      <!-- OFFCANVAS UVI DETAILS WEATHER -->
+      <OffcanvasUVI :weather="weather"></OffcanvasUVI>
+
       <!-- FORECAST 7 DAYS -->
       <div class="row" v-if="weather">
+        <div class="col-md-12">
+          <h6 class="subtitle-1 text-dark">This week</h6>
+        </div>
         <div class="scrolling-wrapper">
           <!-- TOMORROW - 1 DAY -->
           <div class="wrapper">
@@ -211,12 +250,11 @@
         </div>
       </div>
 
-      <div v-else>
-        <h6>No weather data available</h6>
-      </div>
-
     </div>
     <Footer></Footer>
+  </div>
+  <div v-else>
+    <h6>No weather data available</h6>
   </div>
 </template>
 
@@ -226,10 +264,15 @@ import Footer from "@/components/includes/Footer";
 import IconWeather from "@/components/weather/IconWeather";
 import IconCurrentWeather from "@/components/weather/IconCurrentWeather";
 import ListUVI from "@/components/weather/ListUVI";
+import OffcanvasUVI from "@/components/weather/OffcanvasUVI";
 
 export default {
   name: 'Home',
+  metaInfo: {
+    title: 'Home'
+  },
   components: {
+    OffcanvasUVI,
     ListUVI,
     IconCurrentWeather,
     IconWeather,
