@@ -129,6 +129,8 @@ body {
 
 .bg-hot {
   background: linear-gradient(135deg, #ff904f, #ffc061, #ffd54c);
+  //background-size: cover;
+  //background: url("https://appleinformed.files.wordpress.com/2021/06/macosmontereywallpaper.jpg") no-repeat;
 }
 
 /* ---------------------------------------------------
@@ -296,6 +298,7 @@ body {
     .card {
       margin-right: 1rem;
       min-height: 150px;
+      min-width: 150px;
     }
 
     &:last-child {
@@ -310,6 +313,10 @@ body {
     width: 100px !important;
     max-width: 70px !important;
   }*/
+}
+
+.weather-main {
+  padding-bottom: 4rem;
 }
 
 .translate-offscreen {

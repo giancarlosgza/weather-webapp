@@ -13,7 +13,7 @@
   color: var(--theme-on-primary);
   border-radius: $border-radius-8;
   border-style: none;
-  text-transform: uppercase;
+  text-transform: inherit;
   box-shadow: $shadow-sm;
   transition: $transition-cubic-bezier;
   /*display: inline-flex;*/

@@ -1,7 +1,7 @@
 <template>
   <div class="home" v-if="weather.current" :class="[ isColdWeather ? 'bg-cold' : 'bg-hot']">
 
-    <div class="container mb-3">
+    <div class="container weather-main">
       <!-- SEARCH BAR WEATHER -->
       <div class="card card-search-bar bg-frosted border-radius-25">
         <div class="card-body">
@@ -141,8 +141,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[0].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "1 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[0].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[0].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[0].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[0].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -157,8 +157,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[1].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "2 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[1].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[1].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[1].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[1].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -173,8 +173,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[2].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "3 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[2].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[2].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[2].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[2].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -189,8 +189,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[3].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "4 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[3].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[3].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[3].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[3].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -205,8 +205,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[4].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "5 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[4].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[4].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[4].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[4].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -221,8 +221,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[5].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "6 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[5].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[5].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[5].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[5].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -237,8 +237,8 @@
                   <h6 class="subtitle-2 text-muted text-capitalize">{{ weather.daily[6].weather[0].description }}</h6>
                   <h6 class="subtitle-1 fw-500">{{ new Date() | moment("add", "7 days", "dddd") }}</h6>
                   <div class="text-center">
-                    <h6 class="subtitle-1">{{ weather.daily[6].temp.max }} - <span
-                      class="text-muted">{{ weather.daily[6].temp.min }}</span></h6>
+                    <h6 class="subtitle-1">{{ Math.round(weather.daily[6].temp.max) }}° - <span
+                      class="text-muted">{{ Math.round(weather.daily[6].temp.min) }}°</span></h6>
                   </div>
                 </div>
               </div>
@@ -248,7 +248,7 @@
       </div>
 
     </div>
-    <Footer></Footer>
+    <Footer footer-display="d-none d-md-block"></Footer>
   </div>
   <div v-else class="text-center mt-3">
     <LoadingState title="Loading..."></LoadingState>
