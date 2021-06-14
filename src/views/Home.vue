@@ -2,32 +2,29 @@
   <div class="home" v-if="weather.current" :class="[ isColdWeather ? 'bg-cold' : 'bg-hot']">
 
     <div class="container mb-3">
-      <div class="row justify-content-center py-3">
-        <div class="col-md-8">
-          <div class="card bg-frosted border-radius-25">
-            <div class="card-body">
-              <div class="input-group">
+      <!-- SEARCH BAR WEATHER -->
+      <div class="card card-search-bar bg-frosted border-radius-25">
+        <div class="card-body">
+          <div class="input-group">
                   <span class="input-group-text input-group-text-transparent" id="input-city">
                     <i class="material-icons-outlined">location_on</i>
                   </span>
-                <input type="text" class="form-control form-control-border-bottom bg-transparent"
-                       placeholder="New York, Dubai, Madrid, CDMX"
-                       aria-label="New York, Dubai, Madrid, CDMX"
-                       aria-describedby="input-city" v-model="query" @change="getWeather">
-              </div>
-            </div>
+            <input type="text" class="form-control form-control-border-bottom bg-transparent"
+                   placeholder="New York, Dubai, Madrid, CDMX"
+                   aria-label="New York, Dubai, Madrid, CDMX"
+                   aria-describedby="input-city" v-model="query" @change="getWeather">
           </div>
         </div>
       </div>
 
       <!-- CURRENT WEATHER -->
       <div class="row justify-content-center" v-if="weather">
-        <div class="col-md-8 mb-3">
+        <div class="col-md-12 col-lg-8 mb-3">
           <div class="card bg-frosted">
             <div class="card-body text-center">
               <div class="mb-4">
                 <IconCurrentWeather :weather="weather" number="0"></IconCurrentWeather>
-                <h2 class="fw-500">{{ weather.current.temp }} °C</h2>
+                <h2 class="fw-500">{{ Math.round(weather.current.temp) }}°C</h2>
                 <h6 class="subtitle-1 text-capitalize">{{ weather.current.weather[0].description }}</h6>
                 <h6 class="subtitle-1 text-muted">{{ weather.timezone }}</h6>
               </div>
@@ -38,7 +35,7 @@
                       <i class="material-icons-outlined mdc-18 me-1">thermostat</i>
                       Feels like
                     </h6>
-                    <h6 class="subtitle-1 fw-500">{{ weather.current.feels_like }} °C</h6>
+                    <h6 class="subtitle-1 fw-500">{{ Math.round(weather.current.feels_like) }}°C</h6>
                   </div>
                   <div class="col-4 col-md-4">
                     <h6 class="subtitle-2 text-muted">
@@ -60,7 +57,7 @@
           </div>
         </div>
         <!-- CURRENT WEATHER SUNRISE AND SUNSET -->
-        <div class="col-md-8 mb-3">
+        <div class="col-md-12 col-lg-8 mb-3">
           <h6 class="subtitle-1 text-dark mb-3">Today</h6>
           <div class="card bg-frosted">
             <div class="card-body pb-2">
@@ -93,7 +90,7 @@
           </div>
         </div>
         <!-- CURRENT WEATHER DETAILS -->
-        <div class="col-md-8 mb-3">
+        <div class="col-md-12 col-lg-8 mb-3">
           <div class="card bg-frosted">
             <div class="card-body text-center pb-2">
               <div>
@@ -131,7 +128,7 @@
 
       <!-- FORECAST 7 DAYS -->
       <div class="row" v-if="weather">
-        <div class="col-md-12">
+        <div class="col-md-12 col-lg-8">
           <h6 class="subtitle-1 text-dark">This week</h6>
         </div>
         <div class="scrolling-wrapper">

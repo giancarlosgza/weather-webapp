@@ -95,6 +95,12 @@
   .bottom-nav {
     display: flex !important;
   }
+
+  .card {
+    &.card-search-bar {
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
