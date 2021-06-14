@@ -253,8 +253,8 @@
     </div>
     <Footer></Footer>
   </div>
-  <div v-else>
-    <h6>No weather data available</h6>
+  <div v-else class="text-center mt-3">
+    <LoadingState title="Loading..."></LoadingState>
   </div>
 </template>
 
@@ -265,6 +265,7 @@ import IconWeather from "@/components/weather/IconWeather";
 import IconCurrentWeather from "@/components/weather/IconCurrentWeather";
 import ListUVI from "@/components/weather/ListUVI";
 import OffcanvasUVI from "@/components/weather/OffcanvasUVI";
+import LoadingState from "@/components/empty-states/LoadingState";
 
 export default {
   name: 'Home',
@@ -272,6 +273,7 @@ export default {
     title: 'Home'
   },
   components: {
+    LoadingState,
     OffcanvasUVI,
     ListUVI,
     IconCurrentWeather,
