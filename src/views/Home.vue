@@ -58,7 +58,7 @@
         </div>
         <!-- CURRENT WEATHER SUNRISE AND SUNSET -->
         <div class="col-md-12 col-lg-8 mb-3">
-          <h6 class="subtitle-1 text-dark mb-3">Today</h6>
+          <h6 class="subtitle-1 fw-bold text-dark mb-3">Today</h6>
           <div class="card bg-frosted">
             <div class="card-body pb-2">
               <div class="d-flex justify-content-around">
@@ -71,7 +71,8 @@
                 </div>
 
                 <div class="text-center">
-                  <img src="@/assets/img/weather-icons/icon-sunset.png" class="img-fluid" width="48" height="48" alt="Sunset Icon">
+                  <img src="@/assets/img/weather-icons/icon-sunset.png" class="img-fluid" width="48" height="48"
+                       alt="Sunset Icon">
                   <h6 class="subtitle-2 text-muted mt-2">Sunset</h6>
                   <h6 class="subtitle-2 mt-2">{{ weather.current.sunset | moment("h:mm") }} pm</h6>
                 </div>
@@ -120,7 +121,7 @@
       <!-- FORECAST 7 DAYS -->
       <div class="row" v-if="weather">
         <div class="col-md-12 col-lg-8">
-          <h6 class="subtitle-1 text-dark">This week</h6>
+          <h6 class="subtitle-1 fw-bold text-dark">This week</h6>
         </div>
         <div class="scrolling-wrapper">
           <!-- TOMORROW - 1 DAY -->
