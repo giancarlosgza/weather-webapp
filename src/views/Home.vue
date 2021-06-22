@@ -194,11 +194,8 @@ export default {
 
     setResults(results) {
       this.weather = results
-
       const temperature = this.weather.current.temp
-      if (temperature < 18) {
-        this.isColdWeather = true
-      }
+      this.isColdWeather = temperature < 18;
       console.log(temperature)
     },
 
