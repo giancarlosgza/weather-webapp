@@ -10,9 +10,9 @@
                     <i class="material-icons-outlined">location_on</i>
                   </span>
             <input type="text" class="form-control form-control-border-bottom bg-transparent"
-                   placeholder="New York, Dubai, Madrid, CDMX"
-                   aria-label="New York, Dubai, Madrid, CDMX"
-                   aria-describedby="input-city" v-model="query" @change="getWeather">
+                   placeholder="New York, Dubai, Madrid, Mexico City"
+                   aria-label="New York, Dubai, Madrid, Mexico City"
+                   aria-describedby="input-city" v-model="searchBar" @change="getPlace">
           </div>
         </div>
       </div>
@@ -26,7 +26,8 @@
                 <IconCurrentWeather :weather="weather" number="0"></IconCurrentWeather>
                 <h2 class="fw-500">{{ Math.round(weather.current.temp) }}°C</h2>
                 <h6 class="subtitle-1 text-capitalize">{{ weather.current.weather[0].description }}</h6>
-                <h6 class="subtitle-1 text-muted">{{ weather.timezone }}</h6>
+                <h6 class="subtitle-1 text-muted" v-if="geoLocation">{{ geoLocation[0].name || 'Loading...' }},
+                  {{ geoLocation[0].country || 'Loading...' }}</h6>
               </div>
               <div>
                 <div class="row">
@@ -58,7 +59,7 @@
         </div>
         <!-- CURRENT WEATHER SUNRISE AND SUNSET -->
         <div class="col-md-12 col-lg-8 mb-3">
-          <h6 class="subtitle-1 fw-bold text-dark mb-3">Today</h6>
+          <h6 class="subtitle-1 fw-500 text-white mb-3">Today</h6>
           <div class="card bg-frosted">
             <div class="card-body pb-2">
               <div class="d-flex justify-content-around">
@@ -121,7 +122,7 @@
       <!-- FORECAST 7 DAYS -->
       <div class="row" v-if="weather">
         <div class="col-md-12 col-lg-8">
-          <h6 class="subtitle-1 fw-bold text-dark">This week</h6>
+          <h6 class="subtitle-1 fw-500 text-white">This week</h6>
         </div>
         <div class="scrolling-wrapper">
           <!-- TOMORROW - 1 DAY -->
@@ -274,19 +275,31 @@ export default {
       api_key: process.env.VUE_APP_API_KEY,
       url_base: process.env.VUE_APP_API_URL_BASE,
       url_settings: process.env.VUE_APP_API_URL_SETTINGS,
-      query: 'lat=25.6667&lon=-100.3167',
+      // query: 'lat=25.6667&lon=-100.3167',
+      searchBar: 'Monterrey',
       weather: {},
-      isColdWeather: false
+      isColdWeather: false,
+      url_geo_base: process.env.VUE_APP_API_GEO_URL_BASE,
+      geoLocation: {},
     }
   },
   mounted() {
     this.getWeather()
-
+    this.getPlace()
+  },
+  watch: {
+    geoLocation: {
+      handler(geoLocation) {
+        if (geoLocation) {
+          this.getWeather()
+        }
+      }
+    }
   },
   methods: {
     async getWeather() {
       try {
-        await fetch(`${this.url_base}?${this.query}&${this.url_settings}&appid=${this.api_key}`)
+        await fetch(`${this.url_base}?lat=${this.geoLocation[0].lat}&lon=${this.geoLocation[0].lon}&${this.url_settings}&appid=${this.api_key}`)
           .then(async res => {
             return await res.json()
           }).then(this.setResults)
@@ -299,10 +312,26 @@ export default {
       this.weather = results
 
       const temperature = this.weather.current.temp
-      if (temperature < 25) {
+      if (temperature < 18) {
         this.isColdWeather = true
       }
       console.log(temperature)
+    },
+
+    async getPlace() {
+      try {
+        await fetch(`${this.url_geo_base}?q=${this.searchBar}&limit=1&appid=${this.api_key}`)
+          .then(async geores => {
+            return await geores.json()
+          }).then(this.setGeoResults)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+
+    setGeoResults(georesults) {
+      this.geoLocation = georesults
+      console.log(georesults[0].name)
     }
 
   }

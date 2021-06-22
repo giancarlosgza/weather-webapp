@@ -238,8 +238,8 @@
   background-color: var(--theme-navbar);
   color: var(--theme-on-primary);
   box-shadow: $shadow-md;
-  border-top-left-radius: $border-radius-25;
-  border-top-right-radius: $border-radius-25;
+  border-top-left-radius: $border-radius-0;
+  border-top-right-radius: $border-radius-0;
 
   .bottom-nav-item {
     width: 33.33%;

@@ -27,6 +27,10 @@
     background-color: var(--theme-disabled) !important;
     opacity: 0.5;
   }
+
+  &::placeholder {
+    color: var(--theme-muted);
+  }
 }
 
 .form-control-flat {

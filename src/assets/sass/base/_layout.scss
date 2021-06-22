@@ -124,13 +124,15 @@ body {
 }
 
 .bg-cold {
-  background: linear-gradient(135deg, #7dc4f2, #dddcff);
+  //background: linear-gradient(135deg, #7dc4f2, #dddcff);
+  background: url("assets/img/weather-bg/clouds.jpg") no-repeat;
+  background-size: cover;
 }
 
 .bg-hot {
-  //background: linear-gradient(135deg, #ff904f, #ffc061, #ffd54c);
-  background: linear-gradient(135deg, #e6a519, #e05b19);
-  //background-size: cover;
+  //background: linear-gradient(135deg, #e6a519, #e05b19);
+  background: url("assets/img/weather-bg/sunny.jpg") no-repeat;
+  background-size: cover;
   //background: url("https://appleinformed.files.wordpress.com/2021/06/macosmontereywallpaper.jpg") no-repeat;
 }
 

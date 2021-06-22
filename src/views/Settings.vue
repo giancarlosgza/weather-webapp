@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <div class="d-flex">
             <router-link to="/" class="btn btn-link mx-0">
-              <i class="material-icons-outlined">arrow_back_ios</i>
+              <i class="material-icons-outlined mdc-18">arrow_back_ios</i>
               Weather
             </router-link>
             <div class="align-self-center">
@@ -15,12 +15,14 @@
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-md-12">
+        <!-- SETTINGS -->
+        <div class="col-md-12 mb-3">
           <div class="card">
             <div class="card-body pb-0">
-              <h6 class="">
-                <i class="material-icons-outlined text-primary">opacity</i>
+              <h6 class="subtitle-1 fw-500">
+                <i class="material-icons text-primary">opacity</i>
                 Preferences</h6>
               <div class="table-responsive">
                 <table class="table table-borderless">
@@ -45,6 +47,16 @@
             </div>
           </div>
         </div>
+
+        <!-- CREDITS -->
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <a target="_blank" href="https://icons8.com/icon/zIVmoh4T8wh7/partly-cloudy-day">Weather</a>
+              icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <Footer footer-display="d-none"></Footer>
@@ -53,6 +65,7 @@
 
 <script>
 import Footer from "@/components/includes/Footer";
+
 export default {
   components: {Footer},
   computed: {
