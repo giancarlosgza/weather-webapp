@@ -119,6 +119,9 @@
       <!-- OFFCANVAS UVI DETAILS WEATHER -->
       <OffcanvasUVI :weather="weather"></OffcanvasUVI>
 
+      <!-- FORECAST HOURLY -->
+      <ForecastHourly :weather="weather"></ForecastHourly>
+
       <!-- FORECAST 7 DAYS -->
       <ForecastWeek :weather="weather"></ForecastWeek>
 
@@ -140,6 +143,7 @@ import ListUVI from "@/components/weather/ListUVI";
 import OffcanvasUVI from "@/components/weather/OffcanvasUVI";
 import LoadingState from "@/components/empty-states/LoadingState";
 import ForecastWeek from "@/components/weather/ForecastWeek";
+import ForecastHourly from "@/components/weather/ForecastHourly";
 
 export default {
   name: 'Home',
@@ -147,6 +151,7 @@ export default {
     title: 'Home'
   },
   components: {
+    ForecastHourly,
     ForecastWeek,
     LoadingState,
     OffcanvasUVI,
