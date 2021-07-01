@@ -8,7 +8,7 @@ module.exports = {
     manifestOptions: {
       name: "Weatherffy",
       short_name: "Weatherffy",
-      background_color: "#ffffff",
+      background_color: "#1e8cd6",
       theme_color: "#1e8cd6",
     }
   }
