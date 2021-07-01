@@ -7,11 +7,13 @@ import VueMeta from 'vue-meta'
 
 import 'popper.js'
 import 'bootstrap'
+import Trend from "vuetrend"
 
 Vue.config.productionTip = false
 
 Vue.use(require('vue-moment'));
 Vue.use(VueMeta);
+Vue.use(Trend)
 
 new Vue({
   router,
