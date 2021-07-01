@@ -67,6 +67,10 @@
 import Footer from "@/components/includes/Footer";
 
 export default {
+  name: 'Settings',
+  metaInfo: {
+    title: 'Settings'
+  },
   components: {Footer},
   computed: {
     darkMode: {
