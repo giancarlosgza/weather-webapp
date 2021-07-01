@@ -1,0 +1,11 @@
+ <IfModule mod_rewrite.c>
+  RewriteEngine on
+  # Enforce https
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+  # Rewrite non-existent uris to /index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+ </IfModule>
